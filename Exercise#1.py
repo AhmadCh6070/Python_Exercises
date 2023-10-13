@@ -15,3 +15,7 @@ Cafe = float(input("Enter days at Cafe: "))
 Lunch = float(input("Enter Typical Lunch Cost: "))
 Gro = float(input("Enter Cost of Groceries: "))
 print(f"\nAverage Food Expenditure:\nDaily:{(Cafe*Lunch+Gro)/7:.2f}\nWeekly:{Cafe*Lunch+Gro:.2f}")
+
+#Task 4
+Name = input("Enter Your Name: ")
+print(f"Hello, {Name}!")
