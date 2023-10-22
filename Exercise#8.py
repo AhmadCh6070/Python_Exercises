@@ -52,11 +52,9 @@ print("Task#3")
 print()
 def distanceairport(currentID, destinationID):
     sql = "SELECT latitude_deg, longitude_deg FROM airport"
-    sql += " WHERE id = '" + currentID + "' OR id = '" + destinationID + "'"
-    print(sql)
+    sql += " WHERE ident = '" + currentID + "' OR ident = '" + destinationID + "'"
     cus.execute(sql)
     row = cus.fetchall()
-    print(row)
     if row == 0:
         print("No result")
     else:
