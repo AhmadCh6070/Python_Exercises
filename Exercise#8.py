@@ -10,42 +10,42 @@ connection = mysql.connector.connect(
         password='Allahtallah1'
 )
 cus = connection.cursor()
-#
-# #Task 1
-# print("Task#1")
-# print()
-# Icao = input("Enter ICAO Code: ")
-#
-# sql = "select name, municipality from airport where ident = '"+Icao+"'"
-# cus.execute(sql)
-# Info = cus.fetchall()
-# for i,j in Info:
-#     Name = i
-#     if j != "":
-#             Town = j
-#     else:
-#             Town = "[Not Available]"
-#
-# print(f"The name of Airport with ICAO Code \'{Icao}\' is {Name} and it is located in {Town}")
-# print()
-#
-# #Task 2
-#
-# from tabulate import tabulate
-#
-# print("Task#2")
-# print()
-# Area = input("Enter Area Code: ")
-#
-# sql = "select name, type from airport where iso_country = '"+Area+"' order by type desc;"
-# cus.execute(sql)
-# print("End of Table")
-# Info_Area = cus.fetchall()
-#
-# print(tabulate((Info_Area), headers = ["Name","Type"]))
-# print("-------------------------------------------------")
-# print()
-# print()
+
+#Task 1
+print("Task#1")
+print()
+Icao = input("Enter ICAO Code: ")
+
+sql = "select name, municipality from airport where ident = '"+Icao+"'"
+cus.execute(sql)
+Info = cus.fetchall()
+for i,j in Info:
+    Name = i
+    if j != "":
+            Town = j
+    else:
+            Town = "[Not Available]"
+
+print(f"The name of Airport with ICAO Code \'{Icao}\' is {Name} and it is located in {Town}")
+print()
+
+#Task 2
+
+from tabulate import tabulate
+
+print("Task#2")
+print()
+Area = input("Enter Area Code: ")
+
+sql = "select name, type from airport where iso_country = '"+Area+"' order by type desc;"
+cus.execute(sql)
+print("End of Table")
+Info_Area = cus.fetchall()
+
+print(tabulate((Info_Area), headers = ["Name","Type"]))
+print("-------------------------------------------------")
+print()
+print()
 
 #Task 3
 print("Task#3")
